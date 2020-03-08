@@ -9,7 +9,7 @@ class Purchase < ApplicationRecord
   before_create :set_expiration
 
   validates :quality, presence: true
-  validate :new_content
+  validate :new_content, on: :create
 
   enum quality: AVAILABLE_OPTIONS.keys
 
