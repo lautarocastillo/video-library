@@ -10,6 +10,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', '~> 11.1'
+  gem 'faker', '~> 2.10', require: false
 end
 
 group :development do

@@ -7,12 +7,21 @@
 - Redis 5
 
 
+## Install
+```
+> bin/setup
+```
+## :rocket:  Run
+```
+> bin/start
+```
+
 ## ROUTES:
 
 Type | Endpoint | Order
 -- | -- | --
-**GET** | `/library` | Creation |
-**GET** | `/library/movies` | Creation |
-**GET** | `/library/seasons` | Creation |
-**GET** | `/user/library` | Remanining time |
-**POST** | `/user/purchase` `body: { item_id: integer }`| |  
+**GET** | `/api/library` | Creation |
+**GET** | `/api/library/movies` | Creation |
+**GET** | `/api/library/seasons` | Creation |
+**GET** | `/api/user/library` | Remanining time |
+**POST** | `/api/user/purchase` `body: { item_id: integer }`| |  
