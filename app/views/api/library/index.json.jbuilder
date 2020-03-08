@@ -1,1 +1,1 @@
-json.library @library, partial: 'video', as: :video
+json.library @library, partial: 'api/library/video', as: :video

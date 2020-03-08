@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
   def library
     @library = Video.find(@current_user.library)
 
-    render 'api/library/index', data: @library
+    render 'api/library/index', library: @library
   end
 
   def purchase
