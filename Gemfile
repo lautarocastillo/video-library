@@ -18,3 +18,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+group :test do
+  gem 'rspec-rails', '~> 4.0.0.beta4'
+  gem 'factory_bot_rails', '~> 5.1.1'
+  gem 'simplecov', require: false
+end

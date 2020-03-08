@@ -1,5 +1,5 @@
 class Season < Video
-  has_many :episodes, foreign_key: 'video_id'
+  has_many :episodes, -> { order(:number) }, foreign_key: 'video_id'
 
   validates :number, presence: true
 

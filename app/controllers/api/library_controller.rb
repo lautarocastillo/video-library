@@ -11,7 +11,7 @@ class Api::LibraryController < ApplicationController
                when 'movies'
                  Movie.all
                when 'seasons'
-                 Season.all
+                 Season.includes(:episodes).all
                else
                  Video.all
                end

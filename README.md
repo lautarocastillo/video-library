@@ -6,7 +6,6 @@
 - Postgres >= 9.3
 - Redis 5
 
-
 ## Install
 ```
 > bin/setup
@@ -37,3 +36,17 @@ Type | Endpoint | Order
 ```
 
 **NOTE:** All prices are expressed in cents.
+
+## Test
+### Update coverage
+```
+> COVERAGE=1 bundle exec rspec
+```
+### View coverage
+```
+> open coverage/index.html
+```
+### Run tests
+```
+> bundle exec rspec
+```
