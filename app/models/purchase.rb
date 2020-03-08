@@ -15,6 +15,8 @@ class Purchase < ApplicationRecord
 
   scope :active, -> { where('expires_at > ?', DateTime.now) }
 
+  private
+
   def set_price
     self.price = AVAILABLE_OPTIONS[quality.to_sym]
   end
@@ -23,10 +25,8 @@ class Purchase < ApplicationRecord
     self.expires_at = DateTime.now + EXPIRES_IN
   end
 
-  private
-
   def new_content
-    if user.library.pluck(:video_id).include? video_id
+    if user.library.include? video_id
       errors.add(:user, 'already has this content')
     end
   end

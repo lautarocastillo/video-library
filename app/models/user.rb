@@ -3,6 +3,6 @@ class User < ApplicationRecord
   has_many :purchases
 
   def library
-    purchases.active.order(expires_at: :asc)
+    purchases.active.order(expires_at: :asc).pluck(:video_id)
   end
 end

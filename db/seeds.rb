@@ -2,10 +2,11 @@ require 'faker'
 
 5.times do |t|
   User.create(email: Faker::Internet.email)
-  Video.create(title: Faker::Game.title, plot: Faker::Food.description, video_type: (t % 2 == 0) ? :season : :movie )
+  Movie.create(title: Faker::Game.title, plot: Faker::Food.description)
+  Season.create(title: Faker::Game.title, plot: Faker::Food.description, number: Faker::Number.number(digits: 1))
 end
 
-Video.season.each do |season|
+Season.all.each do |season|
   episodes = Faker::Number.number(digits: 1)
 
   episodes.times do |ep|

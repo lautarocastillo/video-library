@@ -3,7 +3,7 @@ class CreateVideos < ActiveRecord::Migration[6.0]
     create_table :videos do |t|
       t.string :title, null: false
       t.string :plot, null: false
-      t.integer :video_type, null: false, default: 0 
+      t.string :type, null: false
 
       t.timestamps
     end

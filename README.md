@@ -24,6 +24,16 @@ Type | Endpoint | Order
 **GET** | `/api/library/movies` | Creation |
 **GET** | `/api/library/seasons` | Creation |
 **GET** | `/api/user/library` | Remanining time |
-**POST** | `/api/user/purchase` `body: { item_id: integer }`| |  
+**POST** | `/api/user/purchase` (example below)| |  
+
+### Body example for creating a purchase:
+```
+{
+  "purchase": {
+    "video_id": 3,
+    "quality": "sd"
+  }
+}
+```
 
 **NOTE:** All prices are expressed in cents.

@@ -2,7 +2,9 @@ class Api::UsersController < ApplicationController
   before_action :set_user
 
   def library
-    render json: @current_user.library
+    @library = Video.find(@current_user.library)
+
+    render 'api/library/index', data: @library
   end
 
   def purchase
