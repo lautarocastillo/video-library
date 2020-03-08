@@ -25,3 +25,5 @@ Type | Endpoint | Order
 **GET** | `/api/library/seasons` | Creation |
 **GET** | `/api/user/library` | Remanining time |
 **POST** | `/api/user/purchase` `body: { item_id: integer }`| |  
+
+**NOTE:** All prices are expressed in cents.
